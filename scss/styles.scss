@@ -59,16 +59,14 @@ header {
     width: 25%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    p {
-      margin: 0;
-    }
+    justify-content: center;
+    align-items: flex-end;
     button {
       font-family: monospace;
       background: rgba(255, 255, 255, 1);
       height: 1.5em;
       border: none;
-      margin: 0;
+      margin: auto;
       opacity: 0.3;
       transition: all 0.2s;
       outline: none;
@@ -181,8 +179,19 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1em;
     padding: 1em;
+    margin: auto;
     h3 {
       font-size: 2em;
+    }
+    .pleaseDontGoHere {
+      a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 0.9em;
+        &:hover {
+          color: rgba(255, 0, 0, 0.4);
+        }
+      }
     }
   }
   .socials {
@@ -191,27 +200,46 @@ main {
     justify-content: space-between;
     a {
       border-bottom: 0.25em solid rgba(255, 255, 255, 0.2);
-      padding: 0.5em;
       margin: 0.5em;
       display: flex;
       text-decoration: none;
       transition: all 0.25s;
+      justify-content: space-between;
+      width: 100%;
+      padding-bottom: 0.5em;
       &:hover {
         border-color: rgba(255, 255, 255, 1);
-      }
-      * {
-        margin-right: 0.5em;
       }
       img {
         width: 3em;
         border: none;
+      }
+      p {
+        font-weight: bold;
+      }
+      letter-spacing: 0.2em;
+      img {
+        margin: auto 0;
       }
     }
   }
   .large {
     width: 100%;
     p {
-      font-size: 5em;
+      font-size: 4em;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      border-bottom-width: 1em;
+    }
+  }
+}
+
+@media (min-width: 720px) {
+  main .socials {
+    a {
+      width: 20%;
     }
   }
 }

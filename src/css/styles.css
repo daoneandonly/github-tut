@@ -54,17 +54,15 @@ header .colorText {
   width: 25%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-}
-header .colorText p {
-  margin: 0;
+  justify-content: center;
+  align-items: flex-end;
 }
 header .colorText button {
   font-family: monospace;
   background: white;
   height: 1.5em;
   border: none;
-  margin: 0;
+  margin: auto;
   opacity: 0.3;
   transition: all 0.2s;
   outline: none;
@@ -169,9 +167,18 @@ main .construction {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1em;
   padding: 1em;
+  margin: auto;
 }
 main .construction h3 {
   font-size: 2em;
+}
+main .construction .pleaseDontGoHere a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.9em;
+}
+main .construction .pleaseDontGoHere a:hover {
+  color: rgba(255, 0, 0, 0.4);
 }
 main .socials {
   display: flex;
@@ -180,29 +187,45 @@ main .socials {
 }
 main .socials a {
   border-bottom: 0.25em solid rgba(255, 255, 255, 0.2);
-  padding: 0.5em;
   margin: 0.5em;
   display: flex;
   text-decoration: none;
   transition: all 0.25s;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.5em;
+  letter-spacing: 0.2em;
 }
 main .socials a:hover {
   border-color: white;
-}
-main .socials a * {
-  margin-right: 0.5em;
 }
 main .socials a img {
   width: 3em;
   border: none;
 }
+main .socials a p {
+  font-weight: bold;
+}
+main .socials a img {
+  margin: auto 0;
+}
 main .large {
   width: 100%;
 }
 main .large p {
-  font-size: 5em;
+  font-size: 4em;
+  padding: 0;
+  margin: 0;
+}
+main .large a {
+  border-bottom-width: 1em;
 }
 
+@media (min-width: 720px) {
+  main .socials a {
+    width: 20%;
+  }
+}
 .tile {
   color: black;
   display: flex;
