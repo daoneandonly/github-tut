@@ -1,13 +1,14 @@
-let colorTextOne = document.createElement("p");
-let colorTextTwo = document.createElement("p");
 let colorButton = document.createElement("button");
-colorTextOne.textContent = "Move mouse to color the screen!";
+colorButton.textContent = "I want some fancy colors!";
 let colorText = document.querySelector(".colorText");
-colorText.appendChild(colorTextOne);
-colorText.appendChild(colorTextTwo);
 colorText.appendChild(colorButton);
+colorButton.addEventListener("click", function() {
+  window.localStorage.setItem("color", "false");
+  startColor();
+});
 
 function startColor() {
+  window.localStorage.setItem("color", "true");
   colorButton.removeEventListener("click", startColor);
   let html = document.querySelector("html");
   let clickNo = 120;
@@ -28,9 +29,6 @@ function startColor() {
       "skewX(" +
       Math.round((e.clientX / window.screen.width) * 100 - 50) * 0.1 +
       "deg)";
-
-    colorTextOne.textContent = colorOne;
-    colorTextTwo.textContent = colorTwo;
   }
   function plusClick(e) {
     clickNo = Math.floor(Math.random() * 255);
@@ -38,7 +36,9 @@ function startColor() {
 
   colorButton.textContent = "Dude too much colors";
   colorButton.addEventListener("click", stopColor);
+
   function stopColor() {
+    window.localStorage.setItem("color", "false");
     let html = document.querySelector("html");
     let body = document.querySelector("body");
     html.removeEventListener("mousemove", updateColor);
@@ -54,4 +54,7 @@ function startColor() {
   }
 }
 
-startColor();
+if (window.localStorage.color === "false") {
+} else {
+  startColor();
+}
