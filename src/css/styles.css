@@ -11,7 +11,6 @@
     opacity: 1;
   }
 }
-
 * {
   box-sizing: border-box;
 }
@@ -25,45 +24,17 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: rgb(55, 75, 120);
-  background: linear-gradient(
-    45deg,
-    rgb(55, 75, 120) 0%,
-    rgb(75, 55, 120) 100%
-  );
+  background: #374b78;
+  background: linear-gradient(45deg, #374b78 0%, #4b3778 100%);
   font-family: sans-serif;
   color: white;
-}
-
-header h1 {
-  display: inline-block;
-  font-family: sans-serif;
-  font-size: 5.5em;
-  color: rgba(255, 255, 255, 1);
-  top: 0;
-  left: 0;
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0);
-  transition: top 0.05s, left 0.05s, text-shadow 0.2s;
-  margin: 0;
-  width: 75%;
-}
-
-.colorText {
-  display: inline;
-  width: 25%;
 }
 
 html:active header h1 {
   top: 0.1em;
   left: 0.1em;
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 1), 0.16em 0.16em rgba(0, 0, 0, 1);
+  text-shadow: 0.08em 0.08em black, 0.16em 0.16em black;
   transition: top 0.1s linear, left 0.1 linear;
-}
-
-header h1::selection {
-  color: rgba(255, 255, 255, 0.5);
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0.5);
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 p {
@@ -72,48 +43,59 @@ p {
   font-size: 1.2em;
 }
 
+/* ______________HEADER_______________ */
 header {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 2em;
   padding: 1em;
 }
-
+header .colorText {
+  width: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 header .colorText p {
   margin: 0;
 }
-
 header .colorText button {
   font-family: monospace;
-  background: rgba(255, 255, 255, 1);
+  background: white;
   height: 1.5em;
   border: none;
   margin: 0;
   opacity: 0.3;
   transition: all 0.2s;
   outline: none;
-  text-align: center;
+  align-self: flex-end;
 }
-
-header button:hover {
+header .colorText button:hover, header .colorText button:active {
   opacity: 1;
   outline: none;
 }
-
-header button:active {
-  outline: none;
+header h1 {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 5.5em;
+  color: white;
+  top: 0;
+  left: 0;
+  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0);
+  transition: top 0.05s, left 0.05s, text-shadow 0.2s;
+  margin: 0;
+  width: 75%;
 }
-
-header .colorText {
-  display: flex;
-  justify-content: space-between;
+header h1::selection {
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.1);
 }
-
 header h2 {
   display: block;
   width: 30vw;
 }
-h2 a {
+header h2 a {
   position: relative;
   color: white;
   font-size: 3em;
@@ -125,28 +107,35 @@ h2 a {
   top: 0;
   width: 100%;
 }
-
-h2 a:hover {
-  border-bottom: 0.25em solid rgba(255, 255, 255, 1);
+header h2 a h1 {
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 5.5em;
+  color: white;
+  top: 0;
+  left: 0;
+  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0);
+  transition: top 0.05s, left 0.05s, text-shadow 0.2s;
+  margin: 0;
+  width: 75%;
 }
-
-h2 a:active {
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 1), 0.16em 0.16em rgba(0, 0, 0, 1);
+header h2 a:hover {
+  border-bottom: 0.25em solid white;
+}
+header h2 a:active {
+  text-shadow: 0.08em 0.08em black, 0.16em 0.16em black;
   border-bottom: 0.25em solid rgba(255, 255, 255, 0);
 }
-
 header nav {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
 }
-
 header nav h2 {
   width: 100%;
   text-align: center;
 }
-
 header .currentPage a {
   border-bottom: 0.25em solid rgba(255, 255, 255, 0);
 }
@@ -157,29 +146,51 @@ header .currentPage a {
     text-align: left;
   }
 }
-
 /* ______________MAIN_______________ */
-
 main {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
   grid-gap: 2em;
   padding: 1em;
 }
-
 main img {
-  width: 100%;
+  width: 75%;
   max-width: 30em;
   border-radius: 0.5em;
   border: 0.5em solid white;
 }
-
 main .intro {
   grid-column: span 2;
 }
-
 main .intro h2 {
   font-size: 3em;
+}
+main .construction {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1em;
+  padding: 1em;
+}
+main .socials {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .socials a {
+  border-bottom: 0.25em solid rgba(255, 255, 255, 0.2);
+  padding: 0.5em;
+  margin: 0.5em;
+  display: flex;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+main .socials a:hover {
+  border-color: white;
+}
+main .socials a * {
+  margin-right: 0.5em;
+}
+main .socials a img {
+  width: 3em;
+  border: none;
 }
 
 .tile {
@@ -199,7 +210,6 @@ main .intro h2 {
 }
 
 /* ______________FOOTER_______________ */
-
 footer {
   color: rgba(255, 255, 255, 0.4);
   min-height: 2em;
