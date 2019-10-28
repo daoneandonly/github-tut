@@ -139,6 +139,9 @@ header nav h2 {
 header .currentPage a {
   border-bottom: 0.25em solid rgba(255, 255, 255, 0);
 }
+header .currentPage a:hover {
+  border-bottom: 0.25em solid rgba(255, 255, 255, 0);
+}
 
 @media (min-width: 680px) {
   header nav h2 {
@@ -148,9 +151,8 @@ header .currentPage a {
 }
 /* ______________MAIN_______________ */
 main {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
   padding: 1em;
 }
 main img {
@@ -158,9 +160,7 @@ main img {
   max-width: 30em;
   border-radius: 0.5em;
   border: 0.5em solid white;
-}
-main .intro {
-  grid-column: span 2;
+  margin: auto;
 }
 main .intro h2 {
   font-size: 3em;
@@ -170,9 +170,13 @@ main .construction {
   border-radius: 1em;
   padding: 1em;
 }
+main .construction h3 {
+  font-size: 2em;
+}
 main .socials {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 main .socials a {
   border-bottom: 0.25em solid rgba(255, 255, 255, 0.2);
@@ -192,12 +196,17 @@ main .socials a img {
   width: 3em;
   border: none;
 }
+main .large {
+  width: 100%;
+}
+main .large p {
+  font-size: 5em;
+}
 
 .tile {
   color: black;
   display: flex;
   padding: 1em;
-  grid-column: span 2;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   width: 25em;

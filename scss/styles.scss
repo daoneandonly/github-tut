@@ -145,6 +145,9 @@ header {
   }
   .currentPage a {
     border-bottom: 0.25em solid rgba(255, 255, 255, 0);
+    &:hover {
+      border-bottom: 0.25em solid rgba(255, 255, 255, 0);
+    }
   }
 }
 
@@ -158,18 +161,17 @@ header {
 /* ______________MAIN_______________ */
 
 main {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  grid-gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
   padding: 1em;
   img {
     width: 75%;
     max-width: 30em;
     border-radius: 0.5em;
     border: 0.5em solid white;
+    margin: auto;
   }
   .intro {
-    grid-column: span 2;
     h2 {
       font-size: 3em;
     }
@@ -179,10 +181,14 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 1em;
     padding: 1em;
+    h3 {
+      font-size: 2em;
+    }
   }
   .socials {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     a {
       border-bottom: 0.25em solid rgba(255, 255, 255, 0.2);
       padding: 0.5em;
@@ -202,13 +208,18 @@ main {
       }
     }
   }
+  .large {
+    width: 100%;
+    p {
+      font-size: 5em;
+    }
+  }
 }
 
 .tile {
   color: black;
   display: flex;
   padding: 1em;
-  grid-column: span 2;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   width: 25em;
