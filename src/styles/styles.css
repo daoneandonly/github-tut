@@ -11,7 +11,6 @@
     opacity: 1;
   }
 }
-
 * {
   box-sizing: border-box;
 }
@@ -25,12 +24,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: rgb(55, 75, 120);
-  background: linear-gradient(
-    45deg,
-    rgb(55, 75, 120) 0%,
-    rgb(75, 55, 120) 100%
-  );
+  background: #374b78;
+  background: linear-gradient(45deg, #374b78 0%, #4b3778 100%);
   font-family: sans-serif;
   color: white;
 }
@@ -39,7 +34,7 @@ header h1 {
   display: inline-block;
   font-family: sans-serif;
   font-size: 5.5em;
-  color: rgba(255, 255, 255, 1);
+  color: white;
   top: 0;
   left: 0;
   text-shadow: 0.08em 0.08em rgba(0, 0, 0, 0);
@@ -56,7 +51,7 @@ header h1 {
 html:active header h1 {
   top: 0.1em;
   left: 0.1em;
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 1), 0.16em 0.16em rgba(0, 0, 0, 1);
+  text-shadow: 0.08em 0.08em black, 0.16em 0.16em black;
   transition: top 0.1s linear, left 0.1 linear;
 }
 
@@ -85,7 +80,7 @@ header .colorText p {
 
 header .colorText button {
   font-family: monospace;
-  background: rgba(255, 255, 255, 1);
+  background: white;
   height: 1.5em;
   border: none;
   margin: 0;
@@ -113,6 +108,7 @@ header h2 {
   display: block;
   width: 30vw;
 }
+
 h2 a {
   position: relative;
   color: white;
@@ -127,11 +123,11 @@ h2 a {
 }
 
 h2 a:hover {
-  border-bottom: 0.25em solid rgba(255, 255, 255, 1);
+  border-bottom: 0.25em solid white;
 }
 
 h2 a:active {
-  text-shadow: 0.08em 0.08em rgba(0, 0, 0, 1), 0.16em 0.16em rgba(0, 0, 0, 1);
+  text-shadow: 0.08em 0.08em black, 0.16em 0.16em black;
   border-bottom: 0.25em solid rgba(255, 255, 255, 0);
 }
 
@@ -157,9 +153,7 @@ header .currentPage a {
     text-align: left;
   }
 }
-
 /* ______________MAIN_______________ */
-
 main {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1fr;
@@ -199,7 +193,6 @@ main .intro h2 {
 }
 
 /* ______________FOOTER_______________ */
-
 footer {
   color: rgba(255, 255, 255, 0.4);
   min-height: 2em;
