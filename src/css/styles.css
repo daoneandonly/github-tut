@@ -153,12 +153,16 @@ main {
   flex-wrap: wrap;
   padding: 1em;
 }
-main img {
-  width: 75%;
+main img.avatar {
+  width: 40%;
+  min-width: 15em;
   max-width: 30em;
   border-radius: 0.5em;
   border: 0.5em solid white;
   margin: auto;
+}
+main .intro {
+  padding: 1em;
 }
 main .intro h2 {
   font-size: 3em;
@@ -199,14 +203,20 @@ main .socials a {
 main .socials a:hover {
   border-color: white;
 }
+main .socials a:hover img {
+  opacity: 1;
+}
 main .socials a img {
   width: 3em;
   border: none;
+  opacity: 0.4;
 }
 main .socials a p {
   font-weight: bold;
 }
 main .socials a img {
+  transition: 0.25s ease all;
+  filter: invert(100%);
   margin: auto 0;
 }
 main .large {

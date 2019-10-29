@@ -162,8 +162,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   padding: 1em;
-  img {
-    width: 75%;
+  img.avatar {
+    width: 40%;
+    min-width: 15em;
     max-width: 30em;
     border-radius: 0.5em;
     border: 0.5em solid white;
@@ -173,6 +174,7 @@ main {
     h2 {
       font-size: 3em;
     }
+    padding: 1em;
   }
 
   .construction {
@@ -209,16 +211,22 @@ main {
       padding-bottom: 0.5em;
       &:hover {
         border-color: rgba(255, 255, 255, 1);
+        img {
+          opacity: 1;
+        }
       }
       img {
         width: 3em;
         border: none;
+        opacity: 0.4;
       }
       p {
         font-weight: bold;
       }
       letter-spacing: 0.2em;
       img {
+        transition: 0.25s ease all;
+        filter: invert(100%);
         margin: auto 0;
       }
     }
