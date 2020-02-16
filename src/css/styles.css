@@ -59,9 +59,10 @@ header .colorText {
 }
 header .colorText button {
   font-family: monospace;
-  background: white;
-  height: 1.5em;
-  border: none;
+  background: linear-gradient(#969696, white);
+  border-radius: 2px;
+  padding: 1em;
+  border: 1px solid grey;
   margin: auto;
   opacity: 0.3;
   transition: all 0.2s;
@@ -71,6 +72,7 @@ header .colorText button {
 header .colorText button:hover, header .colorText button:active {
   opacity: 1;
   outline: none;
+  cursor: pointer;
 }
 header h1 {
   display: inline-block;
@@ -262,3 +264,5 @@ footer {
 }
 
 /* Kubernetics */
+
+/*# sourceMappingURL=styles.css.map */

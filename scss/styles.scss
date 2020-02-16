@@ -63,9 +63,10 @@ header {
     align-items: flex-end;
     button {
       font-family: monospace;
-      background: rgba(255, 255, 255, 1);
-      height: 1.5em;
-      border: none;
+      background: linear-gradient(rgba(150,150,150,1), rgba(255, 255, 255, 1));
+      border-radius: 2px;
+      padding: 1em;
+      border: 1px solid grey;
       margin: auto;
       opacity: 0.3;
       transition: all 0.2s;
@@ -75,6 +76,7 @@ header {
       &:active {
         opacity: 1;
         outline: none;
+        cursor: pointer;
       }
     }
   }
